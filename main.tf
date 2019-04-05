@@ -36,7 +36,7 @@ resource "aws_redshift_cluster" "main_redshift_cluster" {
   iam_roles = ["${var.cluster_iam_roles}"]
 
   lifecycle {
-    prevent_destroy = true
+    prevent_destroy = false
   }
   
   tags = "${var.default_tags}"
